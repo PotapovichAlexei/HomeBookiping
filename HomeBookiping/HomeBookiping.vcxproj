@@ -139,21 +139,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="Members.h" />
+    <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="Expenses.cpp" />
     <ClCompile Include="Income.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Obligatory.cpp" />
     <ClCompile Include="Optinal.cpp" />
+    <ClCompile Include="OtherIncome.cpp" />
     <ClCompile Include="Transaction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Date.h" />
     <ClInclude Include="definitions.h" />
+    <ClInclude Include="Deposit.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Expenses.h" />
     <ClInclude Include="Income.h" />
     <ClInclude Include="mainHeader.h" />
     <ClInclude Include="Obligatory.h" />
     <ClInclude Include="Optinal.h" />
+    <ClInclude Include="OtherIncome.h" />
     <ClInclude Include="Transaction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

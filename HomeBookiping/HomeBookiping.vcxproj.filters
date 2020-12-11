@@ -39,6 +39,18 @@
     <ClCompile Include="Optinal.cpp">
       <Filter>Файлы ресурсов\transaction.cpp</Filter>
     </ClCompile>
+    <ClCompile Include="Deposit.cpp">
+      <Filter>Файлы ресурсов\transaction.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="OtherIncome.cpp">
+      <Filter>Файлы ресурсов\transaction.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Members.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClCompile>
+    <ClCompile Include="Date.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainHeader.h">
@@ -63,6 +75,15 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Date.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Deposit.h">
+      <Filter>Файлы заголовков\transaction.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OtherIncome.h">
+      <Filter>Файлы заголовков\transaction.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
