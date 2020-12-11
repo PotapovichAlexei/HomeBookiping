@@ -1,3 +1,4 @@
+#include "Date.h"
 //#include "Date.h"
 //
 //bool Date::leap(int y) {
@@ -96,3 +97,4 @@
 //    os << dt.day << " " << m[dt.month - 1] << " " << dt.year;
 //    return os;
 //}
+
