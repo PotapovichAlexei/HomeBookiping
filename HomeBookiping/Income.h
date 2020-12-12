@@ -8,8 +8,8 @@ protected:
 
 public:
 	Income() :Transaction(), _source("") {};
-	Income(Date date, float money, string source) :Transaction(date, money), _source(source) {};
-	Income(string source) :Transaction(), _source(source) {};
+	Income(bool obligatory, Date date, float money, string source) :Transaction(obligatory, date, money), _source(source) {};
+	//Income(string source) :Transaction(), _source(source) {};
 	~Income(){};
 
 	string getSource() { return _source; }

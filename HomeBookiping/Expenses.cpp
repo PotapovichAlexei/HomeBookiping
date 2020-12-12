@@ -3,8 +3,6 @@
 
 istream& operator>>(istream& in, Expenses& obj)
 {
-	//rewind(stdin);
-	//in >> obj._date;
 	in >> dynamic_cast<Transaction&> (obj);
 	rewind(stdin);
 	cout << "Object of consumption: ";

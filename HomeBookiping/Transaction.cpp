@@ -4,6 +4,10 @@
 istream& operator>>(istream& in, Transaction& obj)
 {
 	rewind(stdin);
+	cout << "Obligatory: ";
+	obj._obligatory =inputInt(0,1);
+	
+	rewind(stdin);
 	in >> obj._date;
 	
 	rewind(stdin);

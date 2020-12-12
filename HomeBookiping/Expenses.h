@@ -6,10 +6,11 @@ class Expenses :  Transaction
 protected:
 	string _objOfCons;	//obj of consumption
 	
+	
 public:
 	Expenses() :Transaction(), _objOfCons("") {};
-	Expenses(Date date, float money, string objOfCons) :Transaction(date, money), _objOfCons(objOfCons) {};
-	Expenses(string objOfCons) :Transaction(), _objOfCons(objOfCons) {};
+	Expenses(bool obligatory, Date date, float money, string objOfCons) :Transaction(obligatory, date, money), _objOfCons(objOfCons) {};
+	//Expenses(string objOfCons) :Transaction(), _objOfCons(objOfCons) {};
 	~Expenses() {};
 
 	string getObjOfCons() { return _objOfCons; }

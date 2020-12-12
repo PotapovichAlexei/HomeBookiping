@@ -33,12 +33,6 @@
     <ClCompile Include="Income.cpp">
       <Filter>Файлы ресурсов\transaction.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="Obligatory.cpp">
-      <Filter>Файлы ресурсов\transaction.cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Optinal.cpp">
-      <Filter>Файлы ресурсов\transaction.cpp</Filter>
-    </ClCompile>
     <ClCompile Include="Deposit.cpp">
       <Filter>Файлы ресурсов\transaction.cpp</Filter>
     </ClCompile>
@@ -54,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Transaction.h">
-      <Filter>Файлы заголовков\transaction.h</Filter>
-    </ClInclude>
-    <ClInclude Include="Obligatory.h">
-      <Filter>Файлы заголовков\transaction.h</Filter>
-    </ClInclude>
-    <ClInclude Include="Optinal.h">
       <Filter>Файлы заголовков\transaction.h</Filter>
     </ClInclude>
     <ClInclude Include="Expenses.h">
@@ -80,5 +68,8 @@
     <ClInclude Include="Exception.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
