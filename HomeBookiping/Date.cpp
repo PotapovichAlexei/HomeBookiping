@@ -13,7 +13,13 @@ obj._month = inputInt(0, 12);
 
 rewind(stdin);
 cout << "Year: ";
-obj._month = inputInt(1900, 2050);
+obj._year = inputInt(1900, 2050);
 
 return in;
+}
+
+ostream& operator<<(ostream& out, Date& obj) {
+	out << obj._day << "." << obj._month << "." << obj._year << endl;
+	
+	return out;
 }

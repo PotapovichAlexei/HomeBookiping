@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-
+#include <time.h>
 using namespace std;
 class Date {
 public:
@@ -30,6 +30,7 @@ public:
 //    friend bool operator<= (const Date&, const Date&);
 //    friend bool operator>= (const Date&, const Date&);
     friend istream& operator>>(istream& in, Date& obj);
+    friend ostream& operator<<(ostream& out, Date& obj);
 };
 
 	

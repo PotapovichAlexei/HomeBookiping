@@ -8,49 +8,49 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Exception" Collapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="13.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAACA=</HashCode>
       <FileName>Exception.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ExceptionInput" Collapsed="true">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="13.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAIAAAAAABAAAAAAAAAEA=</HashCode>
       <FileName>Exception.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Deposit" Collapsed="true">
-    <Position X="3" Y="3.25" Width="1.5" />
+  <Class Name="Deposit">
+    <Position X="4.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAACAAAAAAAAAo=</HashCode>
       <FileName>Deposit.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Expenses" Collapsed="true">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+  <Class Name="Expenses">
+    <Position X="1.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAQAAAAAAAAAAAAAAAABAAAACAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Expenses.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Income" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+  <Class Name="Income">
+    <Position X="7" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAACEAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Income.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OtherIncome" Collapsed="true">
-    <Position X="5.25" Y="3.25" Width="1.5" />
+  <Class Name="OtherIncome">
+    <Position X="9.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAIAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>OtherIncome.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Transaction" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
+  <Class Name="Transaction">
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EACAAQAAAAAAAAAABAgCAAAAEAAAAQIAIAAAAAAAIAA=</HashCode>
       <FileName>Transaction.h</FileName>
