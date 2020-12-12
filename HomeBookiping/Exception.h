@@ -1,7 +1,23 @@
 #pragma once
-#include "Header.h"
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
 
 #define inputError 100 //Ошибка ввода 1xx
+
+/*
+		ERRORS
+101 - wrong float input (type mismatch)
+102 - wrong float input (range mismatch)
+104 - wrong int input (type mismatch)
+105 - wrong int input (range mismatch)
+106 - wrong string input (lenght mismatch)
+107 - wrong string input (forbidden characters)
+	
+*/
+
 
 //Класс исключений
 class Exception {
@@ -21,11 +37,6 @@ public:
 	void printError() { cout << endl << "!!! Error " << this->code << " : " << this->message << " !!!" << endl; }
 	~ExceptionInput()override { }
 };
-
-inline void error() {
-	cout << "-! ERROR !-" << endl;
-	exit(0);
-}
 
 
 //Метод ввода числа float в заданном диапазоне 
@@ -70,6 +81,68 @@ inline float inputFloat(const float& minSize, const float& maxSize) {
 }
 
 
+//Метод ввода числа float without size 
+inline float inputFloatWS() {
+
+	bool flag;
+	float number;
+
+	rewind(stdin);
+	cin.clear();
+
+	do {
+
+		try {
+
+			if (!(cin >> number) || cin.get() != '\n')
+				throw ExceptionInput(1, "Type is incorrect");
+
+			flag = false;
+		}
+		catch (...) {
+			flag = true;
+			cin.clear();
+			cout << endl << "Uknown error" << endl;
+			cout << "Try again:" << endl;
+		}
+
+
+	} while (flag);
+
+	return number;
+}
+
+
+//Метод ввода числа int without size
+inline int inputIntWS() {
+
+	bool flag;
+	int number;
+
+	rewind(stdin);
+	cin.clear();
+
+	do
+	{
+		try
+		{
+
+			if (!(cin >> number) || cin.get() != '\n')
+				throw ExceptionInput(4, "Type is incorrect");
+		
+			flag = false;
+		}
+		catch (...) {
+			flag = true;
+			cin.clear();
+			cout << endl << "Uknown error" << endl;
+			cout << "Try again:" << endl;
+		}
+
+	} while (flag);
+
+	return number;
+}
 
 //Метод ввода числа int в заданном диапазоне 
 inline int inputInt (const int& minSize, const int& maxSize) {
@@ -84,38 +157,30 @@ inline int inputInt (const int& minSize, const int& maxSize) {
 	{
 		try
 		{
-			try
-			{
 
-				if (!(cin >> number) || cin.get() != '\n')
-					throw ExceptionInput(4, "Type is incorrect");
-				//if (number == 33) throw;
-				if (number < minSize || number > maxSize)
-					throw ExceptionInput(5, "Range doesn't match");
+			if (!(cin >> number) || cin.get() != '\n')
+				throw ExceptionInput(4, "Type is incorrect");
+			//if (number == 33) throw;
+			if (number < minSize || number > maxSize)
+				throw ExceptionInput(5, "Range doesn't match");
 				
-				flag = false;
-			}
-			catch (ExceptionInput& obj) {
-				flag = true;
-				rewind(stdin);
-				cin.clear();
-				if (number == 33) throw;
-				obj.printError();
-				cout << "-! Enter the number between " << minSize << " and " << maxSize << " !-" << endl;
-				cout << "Try again: ";
-			}
-			catch (...) {
-				flag = true;
-				cin.clear();
-				if (number == 33) throw;
-				cout << endl << "Uknown error" << endl;
-				cout << "Try again:" << endl;
-			}
+			flag = false;
+		}
+		catch (ExceptionInput& obj) {
+			flag = true;
+			rewind(stdin);
+			cin.clear();
+			
+			obj.printError();
+			cout << "-! Enter the number between " << minSize << " and " << maxSize << " !-" << endl;
+			cout << "Try again: ";
 		}
 		catch (...) {
-			cout << "Transfer errors" << endl;
+			flag = true;
+			cin.clear();
+			cout << endl << "Uknown error" << endl;
+			cout << "Try again:" << endl;
 		}
-
 
 	} while (flag);
 

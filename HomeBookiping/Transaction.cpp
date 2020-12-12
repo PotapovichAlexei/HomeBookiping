@@ -1,10 +1,19 @@
 #include "Transaction.h"
+#include "Exception.h"
 
-Transaction::Transaction()
+istream& operator>>(istream& in, Transaction& obj)
 {
+	rewind(stdin);
+	in >> obj._date;
 	
+	rewind(stdin);
+	cout << "Money: ";
+	obj._money = inputFloatWS();
+
+	return in;
 }
 
-Transaction::~Transaction()
-{
+ostream& operator<<(ostream& out, Transaction& obj) {
+	out << "|" << setw(17) << obj._money << "|";
+	return out;
 }

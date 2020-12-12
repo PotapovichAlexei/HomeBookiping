@@ -1,20 +1,26 @@
 #pragma once
-#include "mainHeader.h"
+#include "Date.h"
+#include <iomanip>
+#include <string.h>
 
+//!!!Add DATE
 
 class Transaction {
-private:
-	Date date_;
-	float money_;
+protected:
+	Date _date;
+	float _money;
 public: 
 	//Constructors and Distructor
-	Transaction();
-	~Transaction();
+	Transaction() : _money(0.0) {};
+	Transaction(Date date, float money) : _date(date), _money(money) {};
+	~Transaction() = default;
 
 	//Getters and Setters
-	Date getDate() { return date_; }
-	void setDate(Date date) { this->date_ = date; }
-	float getMoney() { return money_; }
-	void getMoney(float money) { this->money_= money; }
+	Date getDate() { return _date; }
+	void setDate(Date date) { this->_date = date; }
+	float getMoney() { return _money; }
+	void setMoney(const float& money) { this->_money= money; }
 
+	friend istream& operator>>(istream& in, Transaction& obj);
+	friend ostream& operator<<(ostream& out, Transaction& obj);
 };
