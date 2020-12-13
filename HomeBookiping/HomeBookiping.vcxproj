@@ -146,7 +146,10 @@
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="Expenses.cpp" />
     <ClCompile Include="Income.cpp" />
+    <ClCompile Include="Iterator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyRing.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="OtherIncome.cpp" />
     <ClCompile Include="Transaction.cpp" />
   </ItemGroup>
@@ -157,6 +160,9 @@
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Expenses.h" />
     <ClInclude Include="Income.h" />
+    <ClInclude Include="Iterator.h" />
+    <ClInclude Include="MyRing.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="OtherIncome.h" />
     <ClInclude Include="Transaction.h" />
   </ItemGroup>

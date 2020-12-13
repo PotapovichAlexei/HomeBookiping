@@ -19,6 +19,12 @@
     <Filter Include="Файлы ресурсов\transaction.cpp">
       <UniqueIdentifier>{cc1890d9-521a-40cd-bcc7-147f97b65ad5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\container">
+      <UniqueIdentifier>{a1df503a-f795-4470-af20-173768fa7f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\container">
+      <UniqueIdentifier>{bb24b4c1-2551-49b3-b2b7-8753b7a157a7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,6 +57,15 @@
     <ClCompile Include="Account.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
+    <ClCompile Include="Iterator.cpp">
+      <Filter>Файлы ресурсов\container</Filter>
+    </ClCompile>
+    <ClCompile Include="MyRing.cpp">
+      <Filter>Файлы ресурсов\container</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Файлы ресурсов\container</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expenses.h">
@@ -68,14 +83,23 @@
     <ClInclude Include="OtherIncome.h">
       <Filter>Файлы заголовков\transaction.h</Filter>
     </ClInclude>
-    <ClInclude Include="Exception.h">
-      <Filter>Файлы заголовков\transaction.h</Filter>
-    </ClInclude>
     <ClInclude Include="Transaction.h">
       <Filter>Файлы заголовков\transaction.h</Filter>
     </ClInclude>
     <ClInclude Include="BankAccount.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MyRing.h">
+      <Filter>Файлы заголовков\container</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Файлы заголовков\container</Filter>
+    </ClInclude>
+    <ClInclude Include="Iterator.h">
+      <Filter>Файлы заголовков\container</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

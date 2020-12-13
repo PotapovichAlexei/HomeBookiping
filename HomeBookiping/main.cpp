@@ -1,16 +1,16 @@
 #include "Transaction.h" 
-#include "Income.h"
+#include "Income.h" 
 #include "Expenses.h"
 #include "Deposit.h"
 #include "OtherIncome.h"
-
+#include "Account.h"
 
 
 int main() {
-	OtherIncome test;
+	Account test;
 	cin >> test;
 	cout << test<< endl;
-	test.trueIncome();
+	test.addTransaction();
 	cout << test;
 	return 0;
 }
