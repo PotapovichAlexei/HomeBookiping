@@ -12,12 +12,12 @@ istream& operator>>(istream& in, Transaction& obj)
 	
 	rewind(stdin);
 	cout << "Money: ";
-	obj._money = inputFloatWS();
-
+	obj._dirtyMoney = inputFloatWS();
+	obj._money = obj._dirtyMoney;
 	return in;
 }
 
 ostream& operator<<(ostream& out, Transaction& obj) {
-	out << "|" << setw(17) << obj._money << "|";
+	out << "|" << obj._date << setw(17) << obj._dirtyMoney << "|" << setw(17) << obj._money <<  "|";
 	return out;
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include "Transaction.h"
 
-class Expenses :  Transaction
+class Expenses : public Transaction
 {
 protected:
 	string _objOfCons;	//obj of consumption
@@ -9,7 +9,8 @@ protected:
 	
 public:
 	Expenses() :Transaction(), _objOfCons("") {};
-	Expenses(bool obligatory, Date date, float money, string objOfCons) :Transaction(obligatory, date, money), _objOfCons(objOfCons) {};
+	Expenses(bool obligatory, Date date, float money, float dirtyMoney, string objOfCons) :
+		Transaction(obligatory, date, money, dirtyMoney), _objOfCons(objOfCons) {};
 	//Expenses(string objOfCons) :Transaction(), _objOfCons(objOfCons) {};
 	~Expenses() {};
 

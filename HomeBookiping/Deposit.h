@@ -7,7 +7,8 @@ private:
 	float _perDeposit; //percentage of contribution
 public:
 	Deposit() : Income(), _perDeposit(0.0) {};
-	Deposit(bool obligatory,Date date, float money, string source, float percent) :Income(obligatory, date, money, source), _perDeposit(percent) {};
+	Deposit(bool obligatory,Date date, float money, float dirtyMoney, string source, float percent) :
+		Income(obligatory, date, money, dirtyMoney, source), _perDeposit(percent) {};
 	~Deposit() {};
 
 	float getPercent() { return _perDeposit; }
@@ -15,4 +16,7 @@ public:
 
 	friend istream& operator>>(istream& in, Deposit& obj);
 	friend ostream& operator<<(ostream& out, Deposit& obj);
+
+	void trueDepositIncome();
 };
+

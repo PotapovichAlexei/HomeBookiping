@@ -7,6 +7,10 @@
 
 
 int main() {
-
+	OtherIncome test;
+	cin >> test;
+	cout << test<< endl;
+	test.trueIncome();
+	cout << test;
 	return 0;
 }

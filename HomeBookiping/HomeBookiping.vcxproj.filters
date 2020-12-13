@@ -39,17 +39,20 @@
     <ClCompile Include="OtherIncome.cpp">
       <Filter>Файлы ресурсов\transaction.cpp</Filter>
     </ClCompile>
-    <ClCompile Include="Members.h">
+    <ClCompile Include="Date.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.h">
       <Filter>Файлы заголовков</Filter>
     </ClCompile>
-    <ClCompile Include="Date.cpp">
+    <ClCompile Include="BankAccount.cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Transaction.h">
-      <Filter>Файлы заголовков\transaction.h</Filter>
-    </ClInclude>
     <ClInclude Include="Expenses.h">
       <Filter>Файлы заголовков\transaction.h</Filter>
     </ClInclude>
@@ -66,6 +69,12 @@
       <Filter>Файлы заголовков\transaction.h</Filter>
     </ClInclude>
     <ClInclude Include="Exception.h">
+      <Filter>Файлы заголовков\transaction.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Transaction.h">
+      <Filter>Файлы заголовков\transaction.h</Filter>
+    </ClInclude>
+    <ClInclude Include="BankAccount.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

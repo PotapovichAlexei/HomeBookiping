@@ -93,7 +93,7 @@ inline float inputFloatWS() {
 	do {
 
 		try {
-
+			rewind(stdin);
 			if (!(cin >> number) || cin.get() != '\n')
 				throw ExceptionInput(1, "Type is incorrect");
 

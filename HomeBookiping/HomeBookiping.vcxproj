@@ -139,8 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="Date.cpp" />
-    <ClCompile Include="Members.h" />
+    <ClCompile Include="Account.h" />
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="Expenses.cpp" />
     <ClCompile Include="Income.cpp" />
@@ -149,6 +151,7 @@
     <ClCompile Include="Transaction.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BankAccount.h" />
     <ClInclude Include="Date.h" />
     <ClInclude Include="Deposit.h" />
     <ClInclude Include="Exception.h" />
