@@ -1,4 +1,3 @@
-#include "Header.h"
 #include "Node.h"
 
 template<typename T>

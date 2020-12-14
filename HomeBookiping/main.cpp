@@ -3,14 +3,19 @@
 #include "Expenses.h"
 #include "Deposit.h"
 #include "OtherIncome.h"
-#include "Account.h"
+#include"BankAccount.h"
+
+
+#include "MyRing.cpp"
+#include "Node.cpp"
+#include "Iterator.cpp"
 
 
 int main() {
-	Account test;
+	Account<int> test;
 	cin >> test;
 	cout << test<< endl;
-	test.addTransaction();
+	
 	cout << test;
 	return 0;
 }

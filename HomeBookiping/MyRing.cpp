@@ -1,21 +1,31 @@
 #include "MyRing.h"
+//#include "Exception.h"
+
 
 template<typename T>
-MyRing<T>::MyRing()
+Account<T>::Account()
 {
-	
-	this->size = -1;
-	this->head = this->head;	
-	this->tail = this->tail;
 
+	this->size = -1;
+	this->head = this->head;
+	this->tail = this->tail;
+	this->_login = "";
+	this->_password = "";
 }
 
 template<typename T>
-MyRing<T>::MyRing(MyRing& obj)
+Account<T>::Account(Account& obj)
 {
 	this->head = this->head;
 	this->size = -1;
 	Node<T>* temp = obj.tail;
+
+	this->_login = "";
+	this->_password = "";
+	
+	
+	for (int i = 0; i < obj._bankAcc.size(); i++)
+		this->_bankAcc.push_back(obj._bankAcc[i]);
 
 	while (temp)						//Добавление всех элементов кольца объекта в новое кольцо
 	{
@@ -29,24 +39,28 @@ MyRing<T>::MyRing(MyRing& obj)
 }
 
 template<typename T>
-MyRing<T>::MyRing(T& data)
+Account<T>::Account(T& data)
 {
 	this->size = -1;
 	Node<T> obj(data, this->head, this->tail);
 	pushToFront(obj);
+
+	this->_login = "";
+	this->_password = "";
+
 	this->head = this->head;					//Начало кольца - это последний добавленный узел
 	this->tail = this->head->prev;		//Конец кольца - предыдущий перед началом кольца
 }
 
 template<typename T>
-MyRing<T>::~MyRing()
+Account<T>::~Account()
 {
 	clear();
 }
 
 
 template<typename T>
-void MyRing<T>::pushToFront(T& data)
+void Account<T>::pushToFront(T& data)
 {
 	if (this->head == this->head && this->size == -1)							//Если кольцо пустое (содержит 0 элементов и указывает сам на себя)
 	{
@@ -68,7 +82,7 @@ void MyRing<T>::pushToFront(T& data)
 
 
 template<typename T>
-void MyRing<T>::pushToBack(T& data)
+void Account<T>::pushToBack(T& data)
 {
 
 	if (this->head == this->head && this->size == -1) {						//Если кольцо пустое (содержит 0 элементов и указывает сам на себя)
@@ -88,7 +102,7 @@ void MyRing<T>::pushToBack(T& data)
 }
 
 template<typename T>
-void MyRing<T>::print()
+void Account<T>::print()
 {
 	Node<T>* help = this->tail;
 	//Iterator<T> help(this->tail);
@@ -104,7 +118,7 @@ void MyRing<T>::print()
 }
 
 template<typename T>
-void MyRing<T>::insert(T data, int index)
+void Account<T>::insert(T data, int index)
 {
 
 	if (index == 1)
@@ -121,7 +135,7 @@ void MyRing<T>::insert(T data, int index)
 }
 
 template<typename T>
-void MyRing<T>::deleteElement(int index)
+void Account<T>::deleteElement(int index)
 {
 
 	Node<T>* delNode = (*this)[index ];
@@ -158,7 +172,7 @@ void MyRing<T>::deleteElement(int index)
 }
 
 template<typename T>
-Node<T>* MyRing<T>::operator[](const int index)
+Node<T>* Account<T>::operator[](const int index)
 {
 	Node<T>* currNode = this->head;
 
@@ -170,7 +184,7 @@ Node<T>* MyRing<T>::operator[](const int index)
 
 
 template<typename T>
-void MyRing<T>::sort()
+void Account<T>::sort()
 {
 	Iterator<T> tmp = tail, next = tail->next;
 	T chen;
@@ -197,7 +211,7 @@ void MyRing<T>::sort()
 }
 
 template<typename T>
-void MyRing<T>::find(MyRing<T>& newRing)
+void Account<T>::find(Account<T>& newRing)
 {
 	T obj;
 	cout << endl << "Enter information to find: ";
@@ -214,7 +228,7 @@ void MyRing<T>::find(MyRing<T>& newRing)
 }
 
 template<typename T>
-void MyRing<T>::inputRing(int index) {
+void Account<T>::inputRing(int index) {
 
 	T data;
 	cin >> data;
@@ -229,11 +243,45 @@ void MyRing<T>::inputRing(int index) {
 }
 
 template<typename T>
-void MyRing<T>::clear()
+void Account<T>::clear()
 {
 	if (this != NULL && this->size != -1) {
 		while (this->size) deleteElement(0);
 		deleteElement(0);
 	}
 	
+}
+
+
+template<typename T>
+istream& operator>>(istream& in, Account<T>& obj)
+{
+	rewind(stdin);
+	cout << "Login: ";
+	obj._login = inputString(17);
+
+	rewind(stdin);
+	cout << "Password: ";
+	obj._password = stringExceptRussian(17);
+	return in;
+}
+template<typename T>
+ostream& operator<<(ostream& out, Account<T>& obj) {
+	out << "|" << setw(17) << obj._login << "|" << setw(17) << "|";
+	return out;
+}
+template<typename T>
+void Account<T>::addBankAccount()
+{
+	BankAccount bankAcc;
+	cin >> bankAcc;
+	_bankAcc.push_back(bankAcc);
+}
+
+template<typename T>
+void Account<T>::printBankAccount()
+{
+	cout << "Your bank accounts: " << endl;
+	for (int i = 0; i < this->_bankAcc.size(); i++)
+		cout << this->_bankAcc[i];
 }

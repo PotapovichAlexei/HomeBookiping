@@ -139,10 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
     <ClCompile Include="BankAccount.cpp" />
     <ClCompile Include="Date.cpp" />
-    <ClCompile Include="Account.h" />
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="Expenses.cpp" />
     <ClCompile Include="Income.cpp" />
@@ -165,9 +163,6 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="OtherIncome.h" />
     <ClInclude Include="Transaction.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

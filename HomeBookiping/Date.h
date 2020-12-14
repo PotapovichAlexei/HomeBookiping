@@ -1,7 +1,9 @@
 #pragma once
-#include <iostream>
+//#include <iostream>
+//
+//using namespace std;
+#include "Exception.h"
 #include <time.h>
-using namespace std;
 class Date {
 public:
     int _day;

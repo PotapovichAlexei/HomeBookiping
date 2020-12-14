@@ -1,22 +1,25 @@
 #pragma once
-#include"Header.h"
-//#include"Node.h"
-#include "Iterator.h"
-
+#include"Iterator.h"
+#include"BankAccount.h"
+#include <vector>
 
 template<typename T>
-class MyRing
+class Account
 {
 public:
 	Node<T>* head;
 	Node<T>* tail;
 	int size;
 
+	string _login;
+	string _password;
+	vector<BankAccount> _bankAcc;
+
 public:
-	MyRing();
-	MyRing(MyRing& obj);
-	MyRing(T& data);
-	~MyRing();
+	Account();
+	Account(Account& obj);
+	Account(T& data);
+	~Account();
 
 	void pushToFront(T& data);					//добавить элемент в начало кольца
 	void pushToBack(T& data);					//добавить элемент в конец кольца
@@ -27,7 +30,7 @@ public:
 	void clear();								//очистить список
 	
 	void sort();								//Сортировка кольца по возврастанию 
-	void find(MyRing<T>& NewMyRing);			//Поиск элемента кольца
+	void find(Account<T>& NewMyRing);			//Поиск элемента кольца
 
 	void print();								//Вывод кольца на экран
 	Node<T>* operator[](const int index);		//ссыылк на элемент кольца
@@ -36,5 +39,12 @@ public:
 	int getSize() { return size; }				//количетсво элементов в кольце
 	Node<T>* getHead() { return this->head; };	//Конец кольца
 	Node<T>* getTail() { return this->tail; };	//Начало кольца
+
+
+	friend istream& operator>>(istream& in, Account& obj);
+	friend ostream& operator<<(ostream& out, Account& obj);
+
+	void addBankAccount();
+	void printBankAccount();
 };
 
