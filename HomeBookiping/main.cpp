@@ -1,14 +1,8 @@
 #include "Transaction.h" 
-#include "Income.h" 
-#include "Expenses.h"
-#include "Deposit.h"
-#include "OtherIncome.h"
-#include"BankAccount.h"
 
-
-#include "MyRing.cpp"
-#include "Node.cpp"
-#include "Iterator.cpp"
+#include "MyRing.h"
+#include "Node.h"
+#include "Iterator.h"
 
 
 int main() {

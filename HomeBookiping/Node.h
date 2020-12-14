@@ -13,3 +13,5 @@ public:
 	void swap(T& data);
 	~Node();
 };
+
+#include "Node.inl"

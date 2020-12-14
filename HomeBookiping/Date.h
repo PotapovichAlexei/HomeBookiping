@@ -1,8 +1,8 @@
 #pragma once
-//#include <iostream>
-//
-//using namespace std;
-#include "Exception.h"
+#include <iostream>
+
+using namespace std;
+//#include "Exception.h"
 #include <time.h>
 class Date {
 public:

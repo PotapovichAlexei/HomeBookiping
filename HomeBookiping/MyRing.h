@@ -48,3 +48,4 @@ public:
 	void printBankAccount();
 };
 
+#include "MyRing.inl"

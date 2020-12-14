@@ -19,3 +19,5 @@ public:
 	bool operator!=(Node<T>* tmp);
 	void operator+=(const int& tmp);
 };
+
+#include "Iterator.inl"

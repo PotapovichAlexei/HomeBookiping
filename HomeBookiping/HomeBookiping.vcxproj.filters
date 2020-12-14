@@ -96,4 +96,15 @@
       <Filter>Файлы заголовков\container</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Iterator.inl">
+      <Filter>Файлы ресурсов\container</Filter>
+    </None>
+    <None Include="MyRing.inl">
+      <Filter>Файлы ресурсов\container</Filter>
+    </None>
+    <None Include="Node.inl">
+      <Filter>Файлы ресурсов\container</Filter>
+    </None>
+  </ItemGroup>
 </Project>
